@@ -1,0 +1,220 @@
+[Terminal output]
+--------
+Updated chunk cancellation keys.
+   Compiling cvb v0.5.0 (/home/anon/Projects/cvb)
+warning: function `dispatch` is never used
+   --> src/clipboard.rs:318:4
+    |
+318 | fn dispatch<T>(
+    |    ^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `cvb` (bin "cvb" test) generated 1 warning
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.35s
+     Running unittests src/main.rs (target/debug/deps/cvb-f0c3cef42282e499)
+
+running 117 tests
+test clipboard::tests::buffer_length_counts_utf8_bytes ... ok
+test clipboard::tests::capture_ids_are_unique_and_valid ... ok
+test clipboard::tests::buffer_owns_exact_bytes ... ok
+test clipboard::tests::action_policy_uses_byte_length_boundary ... ok
+test clipboard::tests::chunk_messages_leave_small_input_unchanged ... ok
+test clipboard::tests::dispatch_calls_only_direct_copy_below_limit ... ok
+test clipboard::tests::chunk_messages_reject_limits_too_small_for_framing ... ok
+test clipboard::tests::dispatch_calls_only_upload_at_limit ... ok
+test clipboard::tests::chunk_messages_prefer_spaces_when_no_newline_fits ... ok
+test clipboard::tests::chunk_messages_prefer_newline_boundaries ... ok
+test clipboard::tests::handoff_message_contains_stable_github_url ... ok
+test clipboard::tests::dispatch_propagates_selected_action_error ... ok
+test clipboard::tests::multipart_parts_preserve_empty_input ... ok
+test clipboard::tests::limit_config_initializes_default_with_newline ... ok
+test clipboard::tests::limit_config_invalid_value_uses_default ... ok
+test clipboard::tests::multipart_parts_reject_invalid_utf8 ... ok
+test clipboard::tests::limit_config_reads_custom_value ... ok
+test clipboard::tests::multipart_parts_reject_unsafe_capture_ids ... ok
+test clipboard::tests::rejects_invalid_utf8_before_accessing_registry ... ok
+test control::tests::encodes_and_decodes_exit ... ok
+test control::tests::encodes_and_decodes_target_request ... ok
+test clipboard::tests::multipart_parts_stay_below_direct_copy_limit_including_headers ... ok
+test control::tests::encodes_and_decodes_target_response ... ok
+test clipboard::tests::chunk_messages_reconstruct_original_text_exactly ... ok
+test keybind::tests::parses_all_modifiers ... ok
+test control::tests::waits_for_partial_frame ... ok
+test keybind::tests::parses_ctrl_shift_space ... ok
+test keybind::tests::rejects_empty_component ... ok
+test keybind::tests::parses_named_keys ... ok
+test keybind::tests::rejects_invalid_function_key ... ok
+test keybind::tests::rejects_missing_key ... ok
+test keybind::tests::rejects_missing_modifier ... ok
+test keybind::tests::rejects_unknown_modifier ... ok
+test keyboard::tests::binding_matches_modifiers ... ok
+test keyboard::tests::punctuation_keys_match_physical_codes ... ok
+test keyboard::tests::punctuation_keys_reject_wrong_codes ... ok
+test pty::capture_state_tests::captures_data_between_start_and_end ... ok
+test pty::capture_state_tests::end_returns_capture_and_resets_state ... ok
+test pty::capture_state_tests::ignores_data_before_start ... ok
+test pty::capture_state_tests::new_capture_starts_clean_after_end ... ok
+test clipboard::tests::rejects_oversized_capture_before_accessing_registry ... ok
+test pty::marker_scanner_tests::recognizes_pathop_split_at_sixteenth_byte ... ok
+test pty::marker_scanner_tests::preserves_data_between_markers ... ok
+test pty::marker_scanner_tests::recognizes_start_and_end_markers ... ok
+test pty::marker_scanner_tests::recognizes_bracketed_paste_marker_sequence ... ok
+test pty::marker_scanner_tests::recognizes_marker_split_across_reads ... ok
+test pty::capture_state_tests::repeated_start_keeps_existing_capture ... ok
+test pty::transcript_tests::combines_adjacent_terminal_chunks ... ok
+test pty::tests::renders_scrolled_back_output ... ok
+test pty::transcript_tests::ignores_empty_segments ... ok
+test pty::transcript_tests::preserves_terminal_and_literal_segments_in_order ... ok
+test pty::tests::renders_plain_multiline_output ... ok
+test pty::transcript_tests::renders_empty_transcript_as_no_output ... ok
+test pty::tests::strips_ansi_escape_sequences_from_text ... ok
+test pty::tests::renders_carriage_return_rewrites ... ok
+test pull::pull_tests::callers_exit_status_distinguishes_complete_and_incomplete_no_match ... ok
+test pull::pull_tests::callers_exit_status_is_success_when_matches_are_found ... ok
+test pull::pull_tests::bash_function_range_finds_multiline_function_with_nested_control_flow ... ok
+test pty::transcript_tests::renders_terminal_and_preserves_literal_bytes_in_order ... ok
+test pull::pull_tests::bash_function_range_ignores_lines_outside_functions ... ok
+test pull::pull_tests::excluded_terms_filter_matches_before_markdown_expansion ... ok
+test pull::pull_tests::bash_function_range_rejects_unparseable_source ... ok
+test pull::pull_tests::extract_file_scope_parses_line_ranges ... ok
+test pull::pull_tests::extract_file_scope_preserves_query_operators ... ok
+test pull::pull_tests::extract_file_scope_rejects_empty_or_multiple_scopes ... ok
+test pull::pull_tests::extract_callers_scope_rejects_invalid_combinations ... ok
+test pull::pull_tests::filter_file_scope_matches_exact_tracked_path ... ok
+test pull::pull_tests::filter_file_scope_rejects_untracked_path ... ok
+test pull::pull_tests::filter_file_scope_without_scope_preserves_all_files ... ok
+test pull::pull_tests::filter_matches_applies_query_to_record_content ... ok
+test pull::pull_tests::extract_callers_scope_accepts_target_with_optional_file_scope ... ok
+test pull::pull_tests::parse_line_range_accepts_valid_inclusive_ranges ... ok
+test pull::pull_tests::markdown_expansion_includes_nested_headings_and_deduplicates_section ... ok
+test pull::pull_tests::expansion_includes_impl_for_matched_struct ... ok
+test pull::pull_tests::markdown_expansion_starts_at_nearest_nested_heading ... ok
+test pull::pull_tests::parse_line_range_rejects_invalid_ranges ... ok
+test pull::pull_tests::query_bare_terms_use_or_semantics ... ok
+test pull::pull_tests::query_combines_or_required_and_excluded_terms ... ok
+test pull::pull_tests::markdown_expansion_ignores_headings_inside_fenced_code ... ok
+test pull::pull_tests::filter_matches_deduplicates_records_preserving_order ... ok
+test pull::pull_tests::query_plus_terms_are_required ... ok
+test pull::pull_tests::query_rejects_empty_operator_terms ... ok
+test pull::pull_tests::query_supports_quoted_phrases_with_operators ... ok
+test pull::pull_tests::query_minus_terms_are_excluded ... ok
+test pull::pull_tests::read_line_range_rejects_invalid_or_out_of_bounds_ranges ... ok
+test pull::pull_tests::read_line_range_returns_requested_lines_with_original_numbers ... ok
+test clipboard::tests::multipart_parts_reconstruct_original_utf8_exactly ... ok
+test pull::pull_tests::rust_callers_rejects_unparseable_source ... ok
+test pull::pull_tests::rust_callers_finds_method_call_candidates ... ok
+test pull::pull_tests::rust_callers_ignores_mentions_in_comments_and_strings ... ok
+test pull::pull_tests::rust_callers_finds_unqualified_and_qualified_function_calls ... ok
+test pull::pull_tests::expansion_deduplicates_function_blocks_and_preserves_matches ... ok
+test pull::pull_tests::rust_function_range_finds_function_in_inline_module ... ok
+test pull::pull_tests::rust_function_range_finds_impl_method ... ok
+test pull::pull_tests::rust_function_range_rejects_unparseable_source ... ok
+test pull::pull_tests::rust_function_range_finds_multiline_function ... ok
+test tests::civil_from_days_rejects_year_before_one ... ok
+test pull::pull_tests::rust_function_range_finds_multiline_struct ... ok
+test tests::bridge_output_builds_single_file_without_writing_clipboard ... ok
+test pull::pull_tests::rust_function_range_returns_none_outside_functions ... ok
+test tests::bridge_output_builds_multiple_files_without_writing_clipboard ... ok
+test tests::format_system_time_rejects_time_before_epoch ... ok
+test tests::format_unix_timestamp_formats_epoch ... ok
+test tests::parse_ignore_list_ignores_comments_and_blank_lines ... ok
+test tests::multiple_files_are_combined_with_headers ... ok
+test tests::parse_ignore_list_preserves_directory_names ... ok
+test tests::path_leaves_preserve_file_bytes_literally ... ok
+test tests::single_file_output_is_unchanged ... ok
+test tests::path_leaves_preserve_order_and_continue_after_failure ... ok
+test tests::unsupported_path_returns_error ... ok
+test tests::target_paths_requires_every_path_to_exist ... ok
+test tests::bridge_output_builds_directory_inventory_without_writing_clipboard ... ok
+test tests::directory_inventory_contains_metadata ... ok
+test tests::file_and_directory_are_combined ... ok
+test tests::directory_inventory_excludes_ignored_directories ... ok
+test tests::directory_inventory_excludes_ignored_directories_at_any_depth ... ok
+test tests::directory_inventory_reports_symlinks ... ok
+
+test result: ok. 117 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+    Checking cvb v0.5.0 (/home/anon/Projects/cvb)
+warning: constant `MAX_CAPTURE_BYTES` is never used
+  --> src/clipboard.rs:78:7
+   |
+78 | const MAX_CAPTURE_BYTES: usize = 1_000_000;
+   |       ^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `REGISTRY_REMOTE` is never used
+  --> src/clipboard.rs:79:7
+   |
+79 | const REGISTRY_REMOTE: &str = "git@github.com:Mel34/cvb-registry.git";
+   |       ^^^^^^^^^^^^^^^
+
+warning: constant `REGISTRY_FILE_URL` is never used
+  --> src/clipboard.rs:80:7
+   |
+80 | const REGISTRY_FILE_URL: &str =
+   |       ^^^^^^^^^^^^^^^^^
+
+warning: static `CAPTURE_ID_COUNTER` is never used
+  --> src/clipboard.rs:83:8
+   |
+83 | static CAPTURE_ID_COUNTER: AtomicU64 = AtomicU64::new(0);
+   |        ^^^^^^^^^^^^^^^^^^
+
+warning: function `new_capture_id` is never used
+  --> src/clipboard.rs:85:4
+   |
+85 | fn new_capture_id() -> String {
+   |    ^^^^^^^^^^^^^^
+
+warning: enum `ClipboardAction` is never used
+   --> src/clipboard.rs:301:17
+    |
+301 | pub(crate) enum ClipboardAction {
+    |                 ^^^^^^^^^^^^^^^
+
+warning: function `action_for` is never used
+   --> src/clipboard.rs:306:15
+    |
+306 | pub(crate) fn action_for(buffer: &ClipboardBuffer) -> ClipboardAction {
+    |               ^^^^^^^^^^
+
+warning: function `action_for_with_limit` is never used
+   --> src/clipboard.rs:310:4
+    |
+310 | fn action_for_with_limit(buffer: &ClipboardBuffer, limit: usize) -> ClipboardAction {
+    |    ^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `dispatch` is never used
+   --> src/clipboard.rs:318:4
+    |
+318 | fn dispatch<T>(
+    |    ^^^^^^^^
+
+warning: function `dispatch_with_limit` is never used
+   --> src/clipboard.rs:331:4
+    |
+331 | fn dispatch_with_limit<T>(
+    |    ^^^^^^^^^^^^^^^^^^^
+
+warning: function `upload_and_copy_url` is never used
+   --> src/clipboard.rs:407:4
+    |
+407 | fn upload_and_copy_url(buffer: &ClipboardBuffer) -> Result<(), String> {
+    |    ^^^^^^^^^^^^^^^^^^^
+
+warning: function `git_command` is never used
+   --> src/clipboard.rs:559:4
+    |
+559 | fn git_command(repo: &Path, args: &[&str], operation: &str) -> Result<Output, String> {
+    |    ^^^^^^^^^^^
+
+warning: function `handoff_message` is never used
+   --> src/clipboard.rs:582:4
+    |
+582 | fn handoff_message() -> String {
+    |    ^^^^^^^^^^^^^^^
+
+warning: `cvb` (bin "cvb") generated 13 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.12s
